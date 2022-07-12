@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-test" version="0.2.3">
+    <name>Cordova Test Plugin</name>
+    <description>Cordova Plugin Test</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,device</keywords>
+    <js-module src="www/device.js" name="device">
+        <clobbers target="cordova.plugins.CDVDevice" />
+    </js-module>
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="CDVDevice">
+                <param name="android-package" value="com.medplus.cordova.plugin.CDVDevice"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/CDVDevice.java" target-dir="src/cordova-android-test-plugin" />
+    </platform>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="CDVDevice">
+                <param name="ios-package" value="CDVDevice"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVDevice.h" />
+        <source-file src="src/ios/CDVDevice.m" />
+    </platform>
+</plugin>

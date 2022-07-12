@@ -1,0 +1,19 @@
+{
+    "name": "cordova-test-plugin",
+    "version": "1.0.0",
+    "description": "CDVDevice",
+    "cordova": {
+      "id": "cordova-test-plugin",
+      "platforms": [
+        "android",
+        "ios"
+      ]
+    },
+    "keywords": [
+      "ecosystem:cordova",
+      "cordova-android"
+    ],
+    "author": "Sai",
+    
+    "license": "ISC"
+  }
